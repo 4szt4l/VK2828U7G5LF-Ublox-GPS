@@ -1,5 +1,5 @@
-#!/usr/bin/python
 import re
+
 
 # Converts a geographic coordiante given in "degres/minutes" dddmm.mmmm
 # format (ie, "12319.943281" = 123 degrees, 19.953281 minutes) to a signed
@@ -10,7 +10,6 @@ def dm_to_sd(dm):
 		return 0.
 	d, m = re.match(r'^(\d+)(\d\d\.\d+)$', dm).groups()
 	return float(d) + float(m) / 60
-
 
 
 def latitude(raw):
